@@ -1,0 +1,14 @@
+name: Xcodebuild
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: mxcl/xcodebuild@v3
+      # ^^ this is the simplest use, runs tests for whatever platform `xcodebuild` picks
